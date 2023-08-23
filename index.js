@@ -62,9 +62,11 @@ bot.once("spawn", () =>
 
     // Now we just wrap our transition list in a nested state machine layer. We want the bot
     // to start on the getClosestPlayer state, so we'll specify that here.
-    const rootLayer = new NestedStateMachine(transitions, getClosestPlayer);
+    const root = new NestedStateMachine(transitions, getClosestPlayer);
+    root.stateName = 'main'
+
     
-    const stateMachine = new BotStateMachine(bot, rootLayer);
+    const stateMachine = new BotStateMachine(bot, root);
     const webserver = new StateMachineWebserver(bot, stateMachine);
     webserver.startServer();
 
