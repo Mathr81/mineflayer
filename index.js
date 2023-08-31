@@ -2,8 +2,8 @@
 const mineflayer = require("mineflayer");
 const bot = mineflayer.createBot({ 
     username: "Player",
-    host: "EverythingYouNeed.aternos.me",
-    port: 25269,
+    host: "HelloHerobrine.aternos.me",
+    port: 45917,
     timeout: 60000,
  });
 
